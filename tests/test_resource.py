@@ -13,4 +13,4 @@ def test_resource():
             return Version(version)
 
     r = RandomResource()
-    assert isinstance(str, r.check().ref)
+    assert isinstance(r.check().ref, str)
