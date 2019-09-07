@@ -1,5 +1,5 @@
 import abc
-from .version import Version
+from ..version import Version
 
 
 class Resource(abc.ABC):
