@@ -9,8 +9,8 @@ def test_resource():
             self._rng = Random(seed)
 
         def check(self) -> Version:
-            version = self._rng.choices(string.ascii_letters)
-            return Version(version)
+            ref = "".join(self._rng.choices(string.ascii_letters, k=16))
+            return Version(ref)
 
     r = RandomResource()
     assert isinstance(r.check().ref, str)
