@@ -14,6 +14,9 @@ def test_resource():
             ref = "".join(self._rng.choices(string.ascii_letters, k=16))
             return Version(ref)
 
+        def id(self):
+            return "random"
+
     r = RandomResource()
     assert isinstance(r.check().ref, str)
 

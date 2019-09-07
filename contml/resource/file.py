@@ -25,5 +25,8 @@ class LocalFileResource(Resource):
 
         return Version(ref, {"timestamp": ref, "exists": ref != "", "path": self.path})
 
+    def id(self):
+        return self.path
+
     def __repr__(self):
         return f"LocalFileResource({self.path})"
